@@ -3,7 +3,7 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head.pug
     include ../components/sidebar/sidebar.pug
-    include ../components/breadcrumbs/breadcrumbs.pug
+    include ../components/main-section/main-section.pug
 
     head
         +head(head.defaults)
@@ -11,7 +11,7 @@ html(class="no-js", lang="ru")
         |%=symbols=%
 
         +sidebar()
-        +breadcrumbs()
+        +main-section()
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();
