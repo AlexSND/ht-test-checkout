@@ -1,0 +1,31 @@
+mixin delivery(data)
+    .delivery
+        h2 Доставка
+        form(action="#")
+            .delivery__block-title Куда доставить
+            .form-group
+                label Адрес
+                input#street(type="text" placeholder="город, улица, номер дома")
+                .input-group
+                    input#apartment(type="text" placeholder="квартира")
+                    input#floor(type="text" placeholder="этаж")
+                    input#porch(type="text" placeholder="подъезд")
+            .form-group
+                label Комментарий курьеру
+                textarea(name="", rows="5", placeholder="Как пройти, время, домофон")
+
+            .delivery__block-title Кому доставить
+            .form-group
+                label Имя фамилия
+                input#name(type="text")
+
+            .form-group
+                label Номер телефона
+                input#phone(type="tel" placeholder="+7 (000) 000-00-00")
+
+            .form-group
+                label Адрес электронной почты
+                input#phone(type="email")
+
+            .delivery__footer
+                button.btn Перейти к оплате

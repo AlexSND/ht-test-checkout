@@ -1,11 +1,14 @@
 .sidebar {
     width: 400px;
-    height: 100%;
     padding: 0 20px;
     flex-shrink: 0;
     background-color: $main-color;
     color: #fff;
     font-size: 18px;
+
+    .form-group {
+        max-width: 200px;
+    }
 
     &__total {
         display: flex;
