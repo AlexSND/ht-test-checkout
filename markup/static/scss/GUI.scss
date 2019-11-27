@@ -7,6 +7,11 @@ a {
     color: $main-color;
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
 ul {
     padding: 0;
     margin: 0;
@@ -21,7 +26,7 @@ ul {
     display: flex;
 
     input, .form-group {
-        margin-right: 10px;
+        margin: 10px 10px 10px 0;
 
         &:last-of-type {
             margin-right: 0;
@@ -67,7 +72,7 @@ input[type="checkbox"], input[type="radio"] {
     ~ .description {
         margin-top: 6px;
         padding-left: 30px;
-        color: gray;
+        color: $gray;
     }
 }
 
@@ -84,24 +89,39 @@ label {
 
 input {
     height: 42px;
+
+    &:disabled {
+        background-color: rgb(180, 180, 180);
+    }
 }
 
 input, textarea {
-    margin-bottom: 10px;
     width: 100%;
     font-size: 16px;
     padding: 10px;
-    border: 2px solid gray;
+    border: 2px solid $gray;
     border-radius: 4px;
 }
 
 .btn {
+    height: 42px;
+    display: flex;
+    align-items: center;
     background-color: $main-color;
     color: #fff;
-    padding: 10px 26px;
+    padding: 0 26px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
+
+    &.invert {
+        background-color: #fff;
+        color: $main-color;
+
+        &:hover {
+            color: #fff;
+        }
+    }
 
     &:hover {
         background-color: $hover-color;
