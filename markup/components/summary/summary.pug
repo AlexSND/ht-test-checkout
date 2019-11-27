@@ -1,7 +1,7 @@
 mixin summary(data)
     aside.summary.js-summary
         h2 Состав заказа
-        .summary-list
+        .summary-list.js-summary-list
             .summary-list__item
                 .summary-list__title Товаров в корзине
                 .summary-list__value.js-summary-count 3
@@ -12,12 +12,14 @@ mixin summary(data)
 
             .summary-list__item
                 .summary-list__title Доставка
-                .summary-list__value #[span.js-summary-deivery-price 500] р
+                .summary-list__value #[span.js-summary-deivery-price 500] &#8381;
 
         .form-group
             label(for='promo-code') У меня есть промокод
             input.js-promo-code#promo-code(type='text' name='promo-code')
 
+        .summary__promode-description.js-promo-code-description
+
         .summary__total
             .summary__total-text Итого к оплате
-            .summary__total-value #[span.js-total-price 62000] р
+            .summary__total-value #[span.js-total-price 0] &#8381;

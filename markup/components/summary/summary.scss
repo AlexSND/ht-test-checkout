@@ -7,7 +7,9 @@
     font-size: 18px;
 
     .form-group {
-        max-width: 200px;
+        input {
+            max-width: 200px;
+        }
     }
 
     &__total {
@@ -17,6 +19,10 @@
         border-top: 1px solid #fff;
         font-size: 20px;
         font-weight: 700;
+    }
+
+    &__promode-description {
+        margin-bottom: 20px;
     }
 }
 

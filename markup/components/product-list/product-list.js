@@ -16,6 +16,7 @@ class ProductList {
             const productInstance = new Product(product);
             productInstance.subscribe(this.updateProductsSum.bind(this));
         });
+        this.updateProductsSum();
     }
 
     subscribe(subscriber) {
