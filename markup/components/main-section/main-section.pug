@@ -2,8 +2,9 @@ include ../breadcrumbs/breadcrumbs
 include ../product-list/product-list
 include ../delivery/delivery
 include ../payment/payment
+include ../order-status/order-status
 
 mixin main-section(data)
     .main-section
         +breadcrumbs()
-        +payment()
+        +order-status()
