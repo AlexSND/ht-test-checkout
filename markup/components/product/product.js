@@ -5,7 +5,7 @@ class Product {
         this.product = element;
         this.price = this.product.querySelector('.js-product-price').innerHTML;
         this.counterNode = this.product.querySelector('.js-counter');
-        this.count = this.product.querySelector('.js-product-amount');
+        this.count = this.product.querySelector('.js-product-count');
         this.sum = this.product.querySelector('.js-product-sum');
         this.remove = this.product.querySelector('.js-product-remove');
         this.subscribers = [];

@@ -1,0 +1,23 @@
+mixin summary(data)
+    aside.summary.js-summary
+        h2 Состав заказа
+        .summary-list
+            .summary-list__item
+                .summary-list__title Товаров в корзине
+                .summary-list__value.js-summary-count 3
+
+            .summary-list__item
+                .summary-list__title Стоимость товаров
+                .summary-list__value.js-summary-price 6000р
+
+            .summary-list__item
+                .summary-list__title Доставка
+                .summary-list__value #[span.js-summary-deivery-price 500] р
+
+        .form-group
+            label(for='promo-code') У меня есть промокод
+            input.js-promo-code#promo-code(type='text' name='promo-code')
+
+        .summary__total
+            .summary__total-text Итого к оплате
+            .summary__total-value #[span.js-total-price 62000] р
