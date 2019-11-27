@@ -1,0 +1,23 @@
+mixin sidebar(data)
+    aside.sidebar
+        h2 Состав заказа
+        .sidebar-list
+            .sidebar-list__item
+                .sidebar-list__title Товаров в корзине
+                .sidebar-list__value.js-total-amount 3
+
+            .sidebar-list__item
+                .sidebar-list__title Стоимость товаров
+                .sidebar-list__value.js-total-price 6000р
+
+            .sidebar-list__item
+                .sidebar-list__title Доставка
+                .sidebar-list__value.js-deivery-price 500р
+
+        .form-group
+            label(for='promo-code') У меня есть промокод
+            input.js-promo-code#promo-code(type='text' name='promo-code')
+
+        .sidebar__total
+            span Итого к оплате
+            span.js-full-price 62000р
