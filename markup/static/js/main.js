@@ -1,5 +1,8 @@
-'use strict';
+import Product from '../../components/product/product';
 
-/*
-    This file can be used as entry point for webpack!
- */
+const products = document.querySelectorAll('.js-product');
+
+products.forEach(product => {
+    new Product(product);
+});
+
