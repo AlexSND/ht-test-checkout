@@ -1,0 +1,33 @@
+.counter {
+    display: flex;
+    border: 2px solid $main-color;
+    border-radius: 4px;
+    font-size: 12px;
+
+    &__input {
+        width: 40px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    &__incr, &__decr {
+        border: none;
+        width: 40px;
+        font-size: 14px;
+        text-align: center;
+        padding: 0;
+        color: #ffffff;
+        background-color: $main-color;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+
+    &__remove {
+        width: 30px;
+        height: 30px;
+    }
+}

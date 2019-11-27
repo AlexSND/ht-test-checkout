@@ -1,0 +1,20 @@
+include ../counter/counter
+
+mixin product(data)
+    .product
+        .product__image
+            img(src= data.img, alt= data.title)
+        .product__info
+            .product__title= data.title
+            .product__description= data.description
+            .product__amount Количество #[span 1]
+        .product__price
+            span.product__price-amount= data.price
+            span.product__price-currency  &#8381;
+        .product__counter
+            +counter()
+        .product__total-price
+            span.product__price-amount 30000
+            span.product__price-currency  &#8381;
+        .product__remove.js-product-remove
+            != pugHelpers.Icon.call(locals, {iconName: 'close'})

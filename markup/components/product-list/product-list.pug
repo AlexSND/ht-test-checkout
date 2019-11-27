@@ -1,0 +1,33 @@
+include ../product/product
+
+mixin product-list(data)
+    .product-list
+        h2 Ваша корзина
+        .product-list__wrapper.js-products
+            +product({
+                img: "__static__img/content/ath-l5000.jpg",
+                title: "Наушники Audio-Technica ATH-L5000",
+                description: "полноразмерные, закрытые, чувствительность 100 дБ/мВт, импеданс 45 Ом, вес 480 г, разъем jack 6.3 mm",
+                price: 349000
+            })
+            +product({
+                img: "__static__img/content/he-1000.jpg",
+                title: "Наушники HiFiMAN HE-1000",
+                description: "полноразмерные, открытые, планарные, чувствительность 90 дБ, импеданс 35 Ом, вес 480 г, разъем mini jack 3.5 mm",
+                price: 190990
+            })
+            +product({
+                img: "__static__img/content/ath-adx5000.jpg",
+                title: "Audio-Technica ATH-ADX5000",
+                description: "полноразмерные, открытые, чувствительность 100 дБ/мВт, импеданс 420 Ом, вес 270 г, разъем jack 6.3 mm",
+                price: 159990
+            })
+
+        .product-list__total
+            .product__total-text Итого товаров
+            .product__total-value
+                span.js-products-sum 62000
+                span  &#8381;
+
+        .product-list__footer
+            button.btn Перейти к доставке
