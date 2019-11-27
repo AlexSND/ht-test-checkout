@@ -40,11 +40,3 @@ class Counter {
 }
 
 export default Counter;
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     if (document.querySelectorAll('.js-counter').length > 0) {
-//         document.querySelectorAll('.js-counter').forEach(counter => {
-//             new Counter(counter);
-//         });
-//     }
-// });

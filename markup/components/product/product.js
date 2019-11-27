@@ -8,6 +8,7 @@ class Product {
         this.count = this.product.querySelector('.js-product-amount');
         this.sum = this.product.querySelector('.js-product-sum');
         this.remove = this.product.querySelector('.js-product-remove');
+        this.subscribers = [];
 
         this.init();
     }
@@ -24,16 +25,28 @@ class Product {
         this.remove.addEventListener('click', this.removeInstance.bind(this));
     }
 
+    subscribe(subscriber) {
+        this.subscribers.push(subscriber);
+    }
+
+    fire() {
+        this.subscribers.forEach(subscriber => {
+            subscriber();
+        });
+    }
+
     updateCount(count) {
         this.count.textContent = count;
     }
 
     updateSum() {
         this.sum.innerHTML = this.price * this.count.innerHTML;
+        this.fire();
     }
 
     removeInstance() {
         this.product.remove();
+        this.fire();
     }
 }
 

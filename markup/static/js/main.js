@@ -1,8 +1,5 @@
-import Product from '../../components/product/product';
+import ProductList from '../../components/product-list/product-list';
 
 const products = document.querySelectorAll('.js-product');
 
-products.forEach(product => {
-    new Product(product);
-});
-
+new ProductList(products);

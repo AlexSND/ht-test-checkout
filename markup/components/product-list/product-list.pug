@@ -1,9 +1,9 @@
 include ../product/product
 
 mixin product-list(data)
-    .product-list
+    .product-list.js-products-list
         h2 Ваша корзина
-        .product-list__wrapper.js-products
+        .product-list__wrapper
             +product({
                 img: "__static__img/content/ath-l5000.jpg",
                 title: "Наушники Audio-Technica ATH-L5000",
