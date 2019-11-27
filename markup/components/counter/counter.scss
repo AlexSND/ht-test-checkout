@@ -6,8 +6,11 @@
 
     &__input {
         width: 40px;
+        height: auto;
         padding: 5px;
         text-align: center;
+        border: none;
+        margin-bottom: 0;
     }
 
     &__incr, &__decr {
