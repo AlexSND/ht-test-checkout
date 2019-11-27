@@ -10,8 +10,9 @@ html(class="no-js", lang="ru")
     body.page
         |%=symbols=%
 
-        +summary()
-        +main-section()
+        .page__wrapper
+            +summary()
+            +main-section()
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();
