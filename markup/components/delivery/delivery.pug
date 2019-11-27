@@ -5,27 +5,27 @@ mixin delivery(data)
             .form-block-title Куда доставить
             .form-group
                 label Адрес
-                input#street(type="text" placeholder="город, улица, номер дома")
+                input#street(type="text", name="street", placeholder="город, улица, номер дома")
                 .input-group
-                    input#apartment(type="text" placeholder="квартира")
-                    input#floor(type="text" placeholder="этаж")
-                    input#porch(type="text" placeholder="подъезд")
+                    input#apartment(type="text", name="apartment", placeholder="квартира")
+                    input#floor(type="text", name="floor", placeholder="этаж")
+                    input#porch(type="text", name="porch", placeholder="подъезд")
             .form-group
-                label Комментарий курьеру
-                textarea(name="", rows="5", placeholder="Как пройти, время, домофон")
+                label(for="comment") Комментарий курьеру
+                textarea#comment(name="comment", rows="5", placeholder="Как пройти, время, домофон")
 
             .form-block-title Кому доставить
             .form-group
                 label Имя фамилия
-                input#name(type="text")
+                input#name(type="text", name="name")
 
             .form-group
                 label Номер телефона
-                input#phone(type="tel" placeholder="+7 (000) 000-00-00")
+                input#phone(type="tel", name="phone", placeholder="+7 (000) 000-00-00")
 
             .form-group
                 label Адрес электронной почты
-                input#phone(type="email")
+                input#email(type="email", name="email")
 
             .delivery__footer
                 button.btn Перейти к оплате
