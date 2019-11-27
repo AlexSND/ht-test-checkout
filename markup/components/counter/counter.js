@@ -11,6 +11,10 @@ class Counter {
         this.value = 1;
         this.subscribers = [];
 
+        this.onChange = this.onChange.bind(this);
+        this.increment = this.increment.bind(this);
+        this.decrement = this.decrement.bind(this);
+
         this.setEventListeners();
     }
 
@@ -21,7 +25,7 @@ class Counter {
     increment() {
         this.value += 1;
         this.counterInput.value = this.value;
-        this.onChange();
+        this.fire();
     }
 
     /**
@@ -32,8 +36,17 @@ class Counter {
         if (this.value > 1) {
             this.value -= 1;
             this.counterInput.value = this.value;
-            this.onChange();
+            this.fire();
         }
+    }
+
+    /**
+     * @description Change value on input event
+     * @memberof Counter
+     */
+    onChange() {
+        this.value = this.counterInput.value;
+        this.fire();
     }
 
     /**
@@ -49,7 +62,7 @@ class Counter {
      * @description Run subscribers
      * @memberof Counter
      */
-    onChange() {
+    fire() {
         this.subscribers.forEach(subscriber => {
             subscriber(this.value);
         });
@@ -60,8 +73,9 @@ class Counter {
      * @memberof Counter
      */
     setEventListeners() {
-        this.counterIncr.addEventListener('click', this.increment.bind(this));
-        this.counterDecr.addEventListener('click', this.decrement.bind(this));
+        this.counterInput.addEventListener('input', this.onChange);
+        this.counterIncr.addEventListener('click', this.increment);
+        this.counterDecr.addEventListener('click', this.decrement);
     }
 }
 
