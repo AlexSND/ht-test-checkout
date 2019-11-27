@@ -1,0 +1,28 @@
+mixin payment(data)
+    .payment
+        h2 Оплата
+        .form-block-title Способ оплаты
+        .form-group
+            label
+                input(type="radio", name="payment-method", value="online" checked)
+                span Оплата онлайн
+                .description Банковской картой
+            label
+                input(type="radio", name="payment-method", value="receipt")
+                span Оплата приполучении
+                .description Наличными или банковской картой
+
+        .form-block-title Данные карты
+        .form-group
+            label Владелец карты
+            input#card-owner(type="text", name="card-owner", placeholder="Имя, фамилия")
+        .form-group
+            label Номер карты
+            input#card-number(type="number", name="card-number", placeholder="XXXX XXXX XXXX XXXX")
+        .input-group
+            .form-group
+                label Действительна до
+                input#date(type="date", name="date," placeholder="ММ/ГГ")
+            .form-group
+                label Код безопасности
+                input#cvv(type="number", name="cvv")

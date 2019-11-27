@@ -2,7 +2,7 @@ mixin delivery(data)
     .delivery
         h2 Доставка
         form(action="#")
-            .delivery__block-title Куда доставить
+            .form-block-title Куда доставить
             .form-group
                 label Адрес
                 input#street(type="text" placeholder="город, улица, номер дома")
@@ -14,7 +14,7 @@ mixin delivery(data)
                 label Комментарий курьеру
                 textarea(name="", rows="5", placeholder="Как пройти, время, домофон")
 
-            .delivery__block-title Кому доставить
+            .form-block-title Кому доставить
             .form-group
                 label Имя фамилия
                 input#name(type="text")

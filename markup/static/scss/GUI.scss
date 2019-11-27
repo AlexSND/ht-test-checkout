@@ -14,13 +14,13 @@ ul {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .input-group {
     display: flex;
 
-    input {
+    input, .form-group {
         margin-right: 10px;
 
         &:last-of-type {
@@ -29,9 +29,61 @@ ul {
     }
 }
 
+input[type="checkbox"], input[type="radio"] {
+    display: none;
+
+    + span {
+        padding-left: 30px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid $main-color;
+        }
+
+        &:after {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $main-color;
+            opacity: 0;
+        }
+    }
+
+    &:checked + span:after {
+        opacity: 1;
+    }
+
+    ~ .description {
+        margin-top: 6px;
+        padding-left: 30px;
+        color: gray;
+    }
+}
+
+.form-block-title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
 label {
     display: block;
     margin-bottom: 10px;
+}
+
+input {
+    height: 42px;
 }
 
 input, textarea {
