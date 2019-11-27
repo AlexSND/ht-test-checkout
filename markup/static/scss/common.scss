@@ -1,7 +1,6 @@
 // Common styles of the project
 
 html, body {
-    height: 100%;
     box-sizing: border-box;
 }
 
@@ -11,9 +10,14 @@ html, body {
 
 html {
     font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;;
 }
 
 .page {
     display: flex;
-    align-items: flex-start;
+
 }
