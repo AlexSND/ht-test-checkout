@@ -1,10 +1,10 @@
 mixin breadcrumbs(data)
     ul.breadcrumbs
         li.breadcrumbs__item.active
-            a(href="#") Корзина
+            a(href="#product-list").js-checkout-step-link Корзина
         li.breadcrumbs__item
-            a(href="#") Доставка
+            a(href="#delivery").js-checkout-step-link Доставка
         li.breadcrumbs__item
-            a(href="#") Оплата
+            a(href="#payment").js-checkout-step-link Оплата
         li.breadcrumbs__item
-            a(href="#") Статус
+            a(href="#order-status").js-checkout-step-link Статус

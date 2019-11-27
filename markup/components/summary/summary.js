@@ -1,3 +1,7 @@
+/**
+ * @description Create sidebar summary logic
+ * @class Summary
+ */
 class Summary {
     constructor(element) {
         this.summary = element;
@@ -17,6 +21,11 @@ class Summary {
         this.init();
     }
 
+    /**
+     * @description Update summary values
+     * @param {Object} data { sum: number, count: number }
+     * @memberof Summary
+     */
     updateFields(data) {
         if (data) {
             this.sum = +data.sum;
@@ -32,6 +41,11 @@ class Summary {
         }
     }
 
+    /**
+     * @description Check input if promocode exists in promocodes array
+     * @param {Object} event
+     * @memberof Summary
+     */
     checkPromoCode(event) {
         const value = event.target.value;
         this.promocodes.forEach(promocode => {
@@ -43,6 +57,11 @@ class Summary {
         });
     }
 
+    /**
+     * @description Add new promocode to promocodes array
+     * @param {Object} data { code: string, discount: number }
+     * @memberof Summary
+     */
     setPromocode(data) {
         this.promocodes.push(data);
     }
@@ -61,10 +80,20 @@ class Summary {
         this.promocodeDescriptionNode.appendChild(applyButton);
     }
 
+    /**
+     * @description Cleat promocode node if promocode is wrong
+     * @memberof Summary
+     */
     promocodeWrong() {
         this.promocodeDescriptionNode.innerHTML = '';
     }
 
+    /**
+     * @description Apply promocode
+     * @param {number} discount
+     * @param {Object} event
+     * @memberof Summary
+     */
     applyPromocode(discount, event) {
         this.promocodeDescriptionNode.innerHTML = '';
         this.promocodeInput.value = '';
@@ -75,6 +104,10 @@ class Summary {
         event.preventDefault();
     }
 
+    /**
+     * @description Add new summary row
+     * @memberof Summary
+     */
     addSummaryItem() {
         const item = document.createElement('div');
         item.classList.add('summary-list__item');
@@ -93,6 +126,10 @@ class Summary {
         this.summaryList.appendChild(item);
     }
 
+    /**
+     * @description Instance init
+     * @memberof Summary
+     */
     init() {
         this.updateFields();
         if (this.promocodeInput) {

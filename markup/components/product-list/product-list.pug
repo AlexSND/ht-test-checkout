@@ -1,7 +1,7 @@
 include ../product/product
 
 mixin product-list(data)
-    .product-list.js-products-list
+    #product-list.product-list.checkout-step.js-products-list.js-checkout-step
         h2 Ваша корзина
         .product-list__wrapper
             +product({
@@ -29,5 +29,5 @@ mixin product-list(data)
                 span.js-products-sum 62000
                 span  &#8381;
 
-        .product-list__footer
-            button.btn Перейти к доставке
+        .checkout-step__footer
+            a(href="#delivery").btn.js-checkout-step-link Перейти к доставке

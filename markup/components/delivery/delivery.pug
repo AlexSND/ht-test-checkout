@@ -1,31 +1,30 @@
 mixin delivery(data)
-    .delivery
+    #delivery.checkout-step.delivery.js-checkout-step.hidden
         h2 Доставка
-        form(action="#")
-            .form-block-title Куда доставить
-            .form-group
-                label Адрес
-                input#street(type="text", name="street", placeholder="город, улица, номер дома")
-                .input-group
-                    input#apartment(type="text", name="apartment", placeholder="квартира")
-                    input#floor(type="text", name="floor", placeholder="этаж")
-                    input#porch(type="text", name="porch", placeholder="подъезд")
-            .form-group
-                label(for="comment") Комментарий курьеру
-                textarea#comment(name="comment", rows="5", placeholder="Как пройти, время, домофон")
+        .form-block-title Куда доставить
+        .form-group
+            label Адрес
+            input#street(type="text", name="street", placeholder="город, улица, номер дома")
+            .input-group
+                input#apartment(type="text", name="apartment", placeholder="квартира")
+                input#floor(type="text", name="floor", placeholder="этаж")
+                input#porch(type="text", name="porch", placeholder="подъезд")
+        .form-group
+            label(for="comment") Комментарий курьеру
+            textarea#comment(name="comment", rows="5", placeholder="Как пройти, время, домофон")
 
-            .form-block-title Кому доставить
-            .form-group
-                label Имя фамилия
-                input#name(type="text", name="name")
+        .form-block-title Кому доставить
+        .form-group
+            label Имя фамилия
+            input#name(type="text", name="name")
 
-            .form-group
-                label Номер телефона
-                input#phone(type="tel", name="phone", placeholder="+7 (000) 000-00-00")
+        .form-group
+            label Номер телефона
+            input#phone(type="tel", name="phone", placeholder="+7 (000) 000-00-00")
 
-            .form-group
-                label Адрес электронной почты
-                input#email(type="email", name="email")
+        .form-group
+            label Адрес электронной почты
+            input#email(type="email", name="email")
 
-            .delivery__footer
-                button.btn Перейти к оплате
+        .checkout-step__footer
+            a(href="#payment").btn.js-checkout-step-link Перейти к оплате

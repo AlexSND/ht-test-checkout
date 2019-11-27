@@ -1,5 +1,5 @@
 mixin order-status(data)
-        .order-status
+        #order-status.order-status.checkout-step.js-checkout-step.hidden
             h2 Заказ успешно оформлен
 
             p Оплата успешно прошла и наш менеджер уже получил сообщение об этом. В ближайшее время он с вами свяжется и уточнит детали доставки.
@@ -8,5 +8,5 @@ mixin order-status(data)
 
             p Спасибо!
 
-            .order-status__footer
-                button.btn Вернуться на главную
+            .checkout-step__footer
+                a(href="#product-list").btn.js-checkout-step-link Вернуться на главную

@@ -1,5 +1,5 @@
 mixin payment(data)
-    .payment
+    #payment.payment.checkout-step.js-checkout-step.hidden
         h2 Оплата
         .form-block-title Способ оплаты
         .form-group
@@ -26,3 +26,6 @@ mixin payment(data)
             .form-group
                 label Код безопасности
                 input#cvv(type="number", name="cvv")
+
+        .checkout-step__footer
+            a(href="#order-status").btn.js-checkout-step-link Оплатить

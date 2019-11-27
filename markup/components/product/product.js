@@ -1,5 +1,9 @@
 import Counter from '../counter/counter';
 
+/**
+ * @description Create product
+ * @class Product
+ */
 class Product {
     constructor(element) {
         this.product = element;
@@ -13,6 +17,10 @@ class Product {
         this.init();
     }
 
+    /**
+     * @description Instance init
+     * @memberof Product
+     */
     init() {
         if (this.counterNode) {
             this.counter = new Counter(this.counterNode);
@@ -25,25 +33,47 @@ class Product {
         this.remove.addEventListener('click', this.removeInstance.bind(this));
     }
 
+    /**
+     * @description Add new subscriber
+     * @param {function} subscriber callback function
+     * @memberof Product
+     */
     subscribe(subscriber) {
         this.subscribers.push(subscriber);
     }
 
+    /**
+     * @description Run subscribers
+     * @memberof Product
+     */
     fire() {
         this.subscribers.forEach(subscriber => {
             subscriber();
         });
     }
 
+    /**
+     * @description Update product count
+     * @param {number} count
+     * @memberof Product
+     */
     updateCount(count) {
         this.count.textContent = count;
     }
 
+    /**
+     * @description Update sum (count + price)
+     * @memberof Product
+     */
     updateSum() {
         this.sum.innerHTML = this.price * this.count.innerHTML;
         this.fire();
     }
 
+    /**
+     * @description Remove product from DOM
+     * @memberof Product
+     */
     removeInstance() {
         this.product.remove();
         this.fire();

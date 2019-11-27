@@ -21,11 +21,13 @@
         }
 
         a {
+            position: relative;
             display: flex;
             align-items: center;
             height: 100%;
-            padding: 0 25px 0 60px;
+            padding: 0 10px 0 60px;
             color: #fff;
+            z-index: 2;
 
             &:first-child {
                 padding-left: 25px;
