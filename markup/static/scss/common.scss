@@ -2,21 +2,18 @@
 
 html, body {
     height: 100%;
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .page {
-    
-}
-
-.page__wrapper {
-    min-height: 100%;
-    margin-bottom: -50px;
-}
-
-* html .page__wrapper {
-    height: 100%;
-}
-
-.page__buffer {
-    height: 50px;
+    display: flex;
+    align-content: stretch;
 }

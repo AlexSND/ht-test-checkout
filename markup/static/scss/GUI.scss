@@ -1,2 +1,15 @@
-// GUI stylies of the project
-// For example, styles of the links, buttons and so on.
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
