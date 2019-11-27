@@ -1,3 +1,14 @@
+a {
+    text-decoration: none;
+    color: $main-color;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 .form-group {
     margin-bottom: 20px;
 }

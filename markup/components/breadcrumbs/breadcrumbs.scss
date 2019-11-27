@@ -1,0 +1,23 @@
+.breadcrumbs {
+    display: flex;
+    border: 2px solid $main-color;
+
+    &__item {
+        position: relative;
+        background-color: $main-color;
+
+        &.active {
+            background-color: #fff;
+
+            a {
+                color: $main-color;
+            }
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 25px;
+            color: #fff;
+        }
+    }
+}
