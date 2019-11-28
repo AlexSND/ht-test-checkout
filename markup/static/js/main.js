@@ -1,3 +1,4 @@
+import '../../components/utils/utils';
 import Mainview from '../../components/main-section/main-section';
 import ProductList from '../../components/product-list/product-list';
 import Summary from '../../components/summary/summary';

@@ -71,6 +71,7 @@ input[type="checkbox"], input[type="radio"] {
     }
 
     ~ .description {
+        display: block;
         margin-top: 6px;
         padding-left: 30px;
         color: $gray;

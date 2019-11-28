@@ -6,11 +6,11 @@ mixin payment(data)
             label
                 input(type="radio", name="payment-method", value="online" checked)
                 span Оплата онлайн
-                .description Банковской картой
+                span.description Банковской картой
             label
                 input(type="radio", name="payment-method", value="receipt")
                 span Оплата приполучении
-                .description Наличными или банковской картой
+                span.description Наличными или банковской картой
 
         .form-block-title Данные карты
         .form-group
@@ -22,7 +22,7 @@ mixin payment(data)
         .input-group
             .form-group
                 label Действительна до
-                input#date(type="date", name="date," placeholder="ММ/ГГ")
+                input#date(type="date", name="date")
             .form-group
                 label Код безопасности
                 input#cvv(type="number", name="cvv")

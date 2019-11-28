@@ -9,10 +9,8 @@ mixin head(data)
     //- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers
     meta(name="HandheldFriendly", content="true")
 
-    |<!--[if IE 8 ]><link href="%=static=%css/main_ie8%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
-    |<!--[if IE 9 ]><link href="%=static=%css/main_ie9%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
     link(href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet")
-    |<!--[if (gt IE 9)|!(IE)]><!--><link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><!--<![endif]-->
+    <link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css">
 
     if data.useSocialMetaTags
         meta(property="og:title", content="#{data.title}")
@@ -25,6 +23,11 @@ mixin head(data)
         meta(property="og:image:height", content="300")
         meta(property="twitter:description", content="")
         link(rel="image_src", href="")
+
+    link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+    link(rel="manifest" href="/site.webmanifest")
 
     link(rel="icon" type="image/x-icon" href="favicon.ico")
     script.
